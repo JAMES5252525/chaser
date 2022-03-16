@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<style>
+	body{
+            font-size: 16px;
+            background-color: #1DCEB9;
+        }
+           *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+
+	.all{
+		    background-color: black;
+            margin: 0 auto;
+            padding: 0;
+            max-width: 1000px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .wrap{
+            width: 103%;
+            float:left; margin: 0px -1.5%; /*margin 110 origianl*/
+        }
+
+    /* all effects*/
+        .team{
+            width:280px; /*共同寬度*/
+            max-height: 531px;
+            min-height: 531px;
+            float: left; /*靠左浮動*/
+            margin: 30px 2.5%; 
+            background-color: #fff;
+            text-align: center; /*字置中*/
+            position:relative; /*相對定位*/
+            border-radius: 5rem;
+        }
+        .image img{
+            max-width: 100%;
+            vertical-align: middle; /*垂直對齊*/
+            border-top-left-radius: 5rem;
+            border-top-right-radius:5rem ;
+            
+        }
+         h1{
+            font-size: 36px;
+            font-weight: 900;
+            margin: 10px 0 0;
+            text-transform: uppercase; /*強制大寫*/
+            padding-top: 7px;
+            line-height: 33px;
+        }
+         h2{
+            font-size: 16px;
+            line-height: 22px;
+            border-bottom: 1px solid #888;
+            padding-bottom: 0.3em;
+            margin-bottom: 0.4em;
+            font-weight: 900;
+            transition: 0.3s /*animation second*/
+        }
+        p{
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.6;
+            padding: 0 30px;
+            margin-bottom: 10px;
+            font-family:Noto Sans TC;
+            transition: 0.3s /*animation second*/
+        }
+        
+.item1{
+            transform: translateY(0px); /*animation before*/
+            transition: 0.3s; /*animation second*/
+        }
+        .item1 img{
+            vertical-align: middle; /*使元素中部與父元素的基線+x height 的一半對齊*/
+        }
+       
+        
+        .item1 .txt{
+            position: relative; /*positioned by .item .txt:before*/
+        }
+        .item1 .txt:before{ /*偽元素*/
+            content:''; /*need to be typed in or will be none.*/
+            position: absolute; /*positioning on .item .txt*/
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-top: 50px solid transparent;
+            border-left: 140px solid #fff; /*368/2*/
+            border-right: 140px solid #fff; /*368/2*/
+            transform: translateY(-120%); /* up to 100% height(because of Y -100%) 向上100%高度(Y-100%)*/
+            transition: 0.3s;
+
+        }
+        .item1:hover{
+            transform: translateY(-5%); /*animation after*/
+            background: #aaa;
+            transition: 0.3s;
+        }
+       
+        .item1:hover .txt:before{ /* when item be touched, .txt changes color*/
+            border-left: 140px solid #aaa; /*368/2*/
+            border-right: 140px solid #aaa; /*368/2*/
+            transition: 0.3s;
+
+        }
+        .item1:hover h1{ /* h2 color changed animation */
+            color: #fff;
+            border-bottom-color: #fff;
+            transition: 0.3s;
+        }
+        .item1:hover h2{ /* h2 color changed animation */
+            color: #fff;
+            border-bottom-color: #fff;
+            transition: 0.3s;
+        }
+        
+        .item1:hover p{ /*p color changed animation */
+            color: #fff;
+            transition: 0.3s;
+        }
+        
+</style>
+<body>
+
+
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0505.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>張硯宜</h1>
+                        <h2></h2>
+                        <p>來自中市漢口國中，是本屆苗商的隊長，場上多半為球隊奉獻最大能量，場下是球隊公關門面。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>     
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0427.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>古寶誼</h1>
+                        <h2></h2>
+                        <p>來自桃園JHBL名校龍岡國中，是該屆冠軍班底之一，如今為苗商女籃陣中當家控球後衛。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>     
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0290.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>高嬿婷</h1>
+                        <h2></h2>
+                        <p>來自南投、畢業自臺南新營太子國中的後衛，本屆苗商陣中得分主力。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>     
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0317.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>汪嘉欣</h1>
+                        <h2></h2>
+                        <p>來自桃園JHBL名校龍岡國中，雖多半以替補上陣，但上場總是盡力做好自己的本分完成任務。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>     
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0226.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>張宜真</h1>
+                        <h2></h2>
+                        <p>來自臺南後甲國中，是苗商陣中最重要的禁區門神，曾有單場抓下22籃板的驚人數據。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>     
+ <!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0341.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>張文馨</h1>
+                        <h2></h2>
+                        <p>來自臺中市漢口國中，在球隊扮演前鋒得分手角色，場下也有一身好廚藝。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>                          
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0533.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>林語婷</h1>
+                        <h2></h2>
+                        <p>就讀苗商隔壁的明仁國中，雖上場時間不多，但在場邊總能看到努力為隊友吶喊的身影。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div> 
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_1629.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>汪嘉惠</h1>
+                        <h2></h2>
+                        <p>來自桃園市龍岡國中，於108學年度入學至苗商，為該屆招收三位球員之一。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div> 
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_1635.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>羅筱晴</h1>
+                        <h2></h2>
+                        <p>來自高雄市三民國中，於108學年度入學至苗商，為該屆招收三位球員之一。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0008_3.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>蔡幸芸</h1>
+                        <h2></h2>
+                        <p>來自臺北市東山國中，於108學年度入學至苗商，為該屆招收三位球員之一。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>                      
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0178_1.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>王凱𤧛</h1>
+                        <h2></h2>
+                        <p>來自嘉義縣水上國中，自109學年度苗商重返八強後來到苗商，為陣中第二替補中鋒。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>                      
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0020_2.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>王翊馨</h1>
+                        <h2></h2>
+                        <p>來自嘉義縣水上國中，自109學年度苗商重返八強後來到苗商就讀。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>                     
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0128_1.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>古寶瑩</h1>
+                        <h2></h2>
+                        <p>來自桃園市龍岡國中，是陣中當家主力古寶誼的妹妹，姊妹倆感情很好，來到苗商後皆會互相照料。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>                     
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0165_1.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>杜詩婷</h1>
+                        <h2></h2>
+                        <p>來自臺南市太子國中，自109學年度苗商重返八強後來到苗商，為陣中替補後衛之一。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>                     
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0145_1.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>林潔瑩</h1>
+                        <h2></h2>
+                        <p>來自臺南市永仁國中，自109學年度苗商重返八強後來到苗商就讀。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>                     
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0113_1.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>姜緹昀</h1>
+                        <h2></h2>
+                        <p>來自臺南市後甲國中，自109學年度苗商重返八強後來到苗商就讀。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>          
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0169_1.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>柯梓涵</h1>
+                        <h2></h2>
+                        <p>來自臺南市太子國中，自109學年度苗商重返八強後來到苗商就讀。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>          
+
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0044_2.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>徐巧雲</h1>
+                        <h2></h2>
+                        <p>來自桃園市幸福國中，自109學年度苗商重返八強後來到苗商，為陣中替補前鋒。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>          
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0090_2.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>連婕茹</h1>
+                        <h2></h2>
+                        <p>來自臺南市永仁國中，自109學年度苗商重返八強後來到苗商就讀。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>          
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0061_2.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>郭瑜婕</h1>
+                        <h2></h2>
+                        <p>來自臺東縣新生國中，自109學年度苗商重返八強後來到苗商，為陣中替補後衛之一。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div> 
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0101_1.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>陳韋蓁</h1>
+                        <h2></h2>
+                        <p>來自臺北市天母國中，自109學年度苗商重返八強後來到苗商就讀。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>          
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0120_1.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>曾筱筑</h1>
+                        <h2></h2>
+                        <p>來自彰化縣伸港國中，自109學年度苗商重返八強後來到苗商就讀。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>          
+<!--------------item1---------------------------------->
+<div class="team item1">
+                    <div class="image">
+                    <img src="card/images/msvc/IMG_0137_1.jpg"
+                    alt="jpg">
+                    </div>
+                    <div class="txt">
+                        <h1>蔡欣穎</h1>
+                        <h2></h2>
+                        <p>來自桃園市幸福國中，自109學年度苗商重返八強後來到苗商，為陣中第一替補中鋒。</p>
+                    </div>
+                    <div class="icon">
+                        <a class="fb" href="/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="tweet" href="/"><i class="fab fa-twitter"></i></a>
+                        <a class="linkedin" href="/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>          
+
+
+
+                         
+</body>
+</html>
